@@ -9,6 +9,8 @@ module.exports = {
       colors: {
         'warm-gray': colors.warmGray,
         teal: colors.teal,
+        blue: colors.blue,
+        red: colors.red
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
