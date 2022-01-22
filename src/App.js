@@ -210,7 +210,7 @@ export default function FormPage() {
         </h2>
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
           <p className="text-base text-warm-gray-400 xl:text-center">
-            Workers Airtable Form Submission made with <HeartIcon />.
+            Workers Airtable Form Submission made with <HeartIcon className="h-8 w-8 sm:h-10" />.
           </p>
         </div>
       </footer>
