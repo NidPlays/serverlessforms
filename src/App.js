@@ -1,9 +1,10 @@
-import { PencilAltIcon,HeartIcon } from '@heroicons/react/outline'
+import { PencilAltIcon } from '@heroicons/react/outline'
+import { HeartIcon } from "@heroicons/react/solid";
 
 import Form from './Form'
 
 
-const ExternalLink = ({ children, hoverColor = "text-teal-800", href }) =>
+const ExternalLink = ({ children, hoverColor = "text-blue-800", href }) =>
   <a
     className={`underline hover:${hoverColor} transition-all`}
     href={href}
@@ -25,7 +26,7 @@ export default function FormPage() {
               <a href="#">
                 <span className="sr-only">Workflow</span>
                 <PencilAltIcon
-                  className="text-teal-800 h-8 w-auto sm:h-10"
+                  className="text-blue-600 h-8 w-auto sm:h-10"
                 />
               </a>
             </div>
@@ -73,7 +74,7 @@ export default function FormPage() {
                   height={20}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect x={0} y={0} width={4} height={4} className="text-warm-gray-200" fill="currentColor" />
+                  <rect x={0} y={0} width={4} height={4} rx={2} className="text-warm-gray-200" fill="currentColor" />
                 </pattern>
               </defs>
               <rect width={404} height={384} fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
@@ -87,7 +88,7 @@ export default function FormPage() {
 
               <div className="grid grid-cols-1 lg:grid-cols-3">
                 {/* Contact information */}
-                <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-teal-500 to-teal-600 sm:px-10 xl:p-12">
+                <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-blue-500 to-blue-300 sm:px-10 xl:p-12">
                   {/* Decorative angle backgrounds */}
                   <div className="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
                     <svg
@@ -186,9 +187,9 @@ export default function FormPage() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-medium text-white">Example form</h3>
-                  <p className="mt-6 text-base text-teal-50 max-w-3xl">
+                  <p className="mt-6 text-base text-blue-50 max-w-3xl">
                     A fully-featured HTML5 <code>form</code> element that submits data to a serverless function.
-                    This data is added to an <ExternalLink hoverColor="text-teal-300" href="https://airtable.com">Airtable</ExternalLink> table, which can be connected with various integrations and extensions to notify
+                    This data is added to an <ExternalLink hoverColor="text-blue-600" href="https://airtable.com">Airtable</ExternalLink> table, which can be connected with various integrations and extensions to notify
                     you on new submissions and changes.
                   </p>
                 </div>
@@ -208,11 +209,16 @@ export default function FormPage() {
         <h2 id="footerHeading" className="sr-only">
           Footer
         </h2>
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-          <p className="text-base text-warm-gray-400 xl:text-center flex">
-            Workers Airtable Form Submission made with<HeartIcon className="h-8 w-8 sm:h-10" />.
-          </p>
+        <div className="flex items-center align-center justify-center max-w-7xl mx-auto py-12">
+          <div className="text-base text-warm-gray-400">
+            Workers Airtable Form Submission made with
+          </div>
+          <div> <HeartIcon className="text-red-500  h-6 w-auto" /></div>
+          <div className="text-base text-warm-gray-400">
+            by Nidish G and the Cloudflare Workers Team
+          </div>
         </div>
+
       </footer>
     </div>
   )
