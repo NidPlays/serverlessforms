@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import ThankYou from './ThankYou';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Router>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/thankyou" element={<ThankYou />} />
+        </Routes>
+    </Router>,
   document.getElementById('root')
 );
 
